@@ -329,13 +329,83 @@
   }
 
   body {
-    margin: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  h1 {
+    margin-bottom: 16px !important;
+  }
+
+  p {
+    margin-bottom: 8px !important;
+  }
+
+  img {
+    margin-bottom: 8px;
   }
 
   *,
   *:before,
   *:after {
     box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'Akzidenz';
+    font-weight: normal;
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.eot');
+    /* IE9 Compat Modes */
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.woff')
+        format('woff'),
+      /* Pretty Modern Browsers */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.ttf')
+        format('truetype'),
+      /* Safari, Android, iOS */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.svg#Akzidenz')
+        format('svg');
+    /* Legacy iOS */
+  }
+
+  @font-face {
+    font-family: 'Akzidenz';
+    font-weight: 600;
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot');
+    /* IE9 Compat Modes */
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.woff')
+        format('woff'),
+      /* Pretty Modern Browsers */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.ttf')
+        format('truetype'),
+      /* Safari, Android, iOS */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.svg#Akzidenz')
+        format('svg');
+    /* Legacy iOS */
+  }
+
+  @font-face {
+    font-family: 'Akzidenz';
+    font-weight: bold;
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot');
+    /* IE9 Compat Modes */
+    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.woff')
+        format('woff'),
+      /* Pretty Modern Browsers */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.ttf')
+        format('truetype'),
+      /* Safari, Android, iOS */
+        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.svg#Akzidenz')
+        format('svg');
+    /* Legacy iOS */
   }
 
   /**
@@ -458,63 +528,6 @@
         format('woff2'),
       url('https://d2va9gm4j17fy9.cloudfront.net/fonts/value-serif/MongoDBValueSerif-Regular.ttf')
         format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Akzidenz';
-    font-weight: normal;
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.eot');
-    /* IE9 Compat Modes */
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.eot?#iefix')
-        format('embedded-opentype'),
-      /* IE6-IE8 */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.woff')
-        format('woff'),
-      /* Pretty Modern Browsers */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.ttf')
-        format('truetype'),
-      /* Safari, Android, iOS */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdreg.svg#Akzidenz')
-        format('svg');
-    /* Legacy iOS */
-  }
-
-  @font-face {
-    font-family: 'Akzidenz';
-    font-weight: 600;
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot');
-    /* IE9 Compat Modes */
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot?#iefix')
-        format('embedded-opentype'),
-      /* IE6-IE8 */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.woff')
-        format('woff'),
-      /* Pretty Modern Browsers */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.ttf')
-        format('truetype'),
-      /* Safari, Android, iOS */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.svg#Akzidenz')
-        format('svg');
-    /* Legacy iOS */
-  }
-
-  @font-face {
-    font-family: 'Akzidenz';
-    font-weight: bold;
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot');
-    /* IE9 Compat Modes */
-    src: url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.eot?#iefix')
-        format('embedded-opentype'),
-      /* IE6-IE8 */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.woff')
-        format('woff'),
-      /* Pretty Modern Browsers */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.ttf')
-        format('truetype'),
-      /* Safari, Android, iOS */
-        url('https://d2va9gm4j17fy9.cloudfront.net/fonts/akzidgrostdmed.svg#Akzidenz')
-        format('svg');
-    /* Legacy iOS */
   }</style><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
@@ -536,4 +549,4 @@
           
       
           
-            window['STORIES'] = [{"titlePrefix":"","directory":".","files":"**/*.story.@(ts|js)?(x)","importPathMatcher":"^\\.(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.story\\.(ts|js)(?:x)?)$"}];</script><script src="runtime~main.34bee80f.iframe.bundle.js"></script><script src="vendors~main.8a11ee5a.iframe.bundle.js"></script><script src="main.3455b43f.iframe.bundle.js"></script></body></html>
+            window['STORIES'] = [{"titlePrefix":"","directory":".","files":"**/*.story.@(mdx|js|jsx|ts|tsx)","importPathMatcher":"^\\.(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.story\\.(mdx|js|jsx|ts|tsx))$"},{"titlePrefix":"","directory":".","files":"**/*.stories.@(mdx|js|jsx|ts|tsx)","importPathMatcher":"^\\.(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.stories\\.(mdx|js|jsx|ts|tsx))$"}];</script><script src="runtime~main.7d28896a.iframe.bundle.js"></script><script src="vendors~main.21a52ee8.iframe.bundle.js"></script><script src="main.3e03fd8a.iframe.bundle.js"></script></body></html>
