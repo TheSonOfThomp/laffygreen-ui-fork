@@ -56,7 +56,7 @@ object-assign
  */
 
 /*!
-* focus-trap 6.8.1
+* focus-trap 6.9.4
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 
@@ -66,7 +66,7 @@ object-assign
 */
 
 /*!
-* tabbable 5.3.1
+* tabbable 5.3.3
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
 
@@ -105,6 +105,15 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /** @license React v0.20.2
  * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react-dom-test-utils.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
