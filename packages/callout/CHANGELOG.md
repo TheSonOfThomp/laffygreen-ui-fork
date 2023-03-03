@@ -1,5 +1,17 @@
 # @leafygreen-ui/callout
 
+## 9.0.5
+
+### Patch Changes
+
+- Updated dependencies [5b036515]
+- Updated dependencies [26e341a0]
+- Updated dependencies [eb0cc449]
+  - @leafygreen-ui/palette@4.0.0
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/typography@16.1.0
+  - @leafygreen-ui/tokens@2.0.1
+
 ## 9.0.4
 
 ### Patch Changes

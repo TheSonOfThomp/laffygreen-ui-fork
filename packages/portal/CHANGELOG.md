@@ -1,5 +1,16 @@
 # @leafygreen-ui/portal
 
+## 4.1.0
+
+### Minor Changes
+
+- 52dcb331: Exports `usePortalContainer` hook
+
+### Patch Changes
+
+- Updated dependencies [26e341a0]
+  - @leafygreen-ui/lib@10.2.2
+
 ## 4.0.9
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @leafygreen-ui/guide-cue
 
+## 4.0.2
+
+### Patch Changes
+
+- Updated dependencies [5b036515]
+- Updated dependencies [26e341a0]
+- Updated dependencies [eb0cc449]
+  - @leafygreen-ui/palette@4.0.0
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/typography@16.1.0
+  - @leafygreen-ui/button@20.0.2
+  - @leafygreen-ui/icon-button@15.0.7
+  - @leafygreen-ui/tooltip@9.1.6
+
 ## 4.0.1
 
 ### Patch Changes

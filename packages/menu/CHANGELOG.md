@@ -1,5 +1,20 @@
 # @leafygreen-ui/menu
 
+## 20.0.1
+
+### Patch Changes
+
+- b9841dec: Ensures MenuItem and SubMenu components are rendered with proper HTML elements
+- b9841dec: Improves prop types and polymorphic support
+- Updated dependencies [5b036515]
+- Updated dependencies [b9841dec]
+- Updated dependencies [26e341a0]
+  - @leafygreen-ui/palette@4.0.0
+  - @leafygreen-ui/polymorphic@1.2.0
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/icon-button@15.0.7
+  - @leafygreen-ui/tokens@2.0.1
+
 ## 20.0.0
 
 ### Major Changes

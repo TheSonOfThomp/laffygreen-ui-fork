@@ -1,5 +1,15 @@
 # @leafygreen-ui/pagination
 
+## 1.0.3
+
+### Patch Changes
+
+- 26e341a0: Storybook: excludes all callbacks from storybook controls
+- Updated dependencies [26e341a0]
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/icon-button@15.0.7
+  - @leafygreen-ui/select@10.2.3
+
 ## 1.0.2
 
 ### Patch Changes

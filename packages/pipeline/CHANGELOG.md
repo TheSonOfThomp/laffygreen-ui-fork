@@ -1,5 +1,16 @@
 # @leafygreen-ui/pipeline
 
+## 5.0.5
+
+### Patch Changes
+
+- Updated dependencies [5b036515]
+- Updated dependencies [26e341a0]
+  - @leafygreen-ui/palette@4.0.0
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/tokens@2.0.1
+  - @leafygreen-ui/tooltip@9.1.6
+
 ## 5.0.4
 
 ### Patch Changes

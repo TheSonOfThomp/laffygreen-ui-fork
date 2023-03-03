@@ -1,5 +1,15 @@
 # @leafygreen-ui/icon-button
 
+## 15.0.7
+
+### Patch Changes
+
+- Updated dependencies [5b036515]
+- Updated dependencies [26e341a0]
+  - @leafygreen-ui/palette@4.0.0
+  - @leafygreen-ui/lib@10.2.2
+  - @leafygreen-ui/tokens@2.0.1
+
 ## 15.0.6
 
 ### Patch Changes
