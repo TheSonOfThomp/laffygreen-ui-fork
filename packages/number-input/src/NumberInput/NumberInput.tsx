@@ -11,13 +11,13 @@ import { Label } from '@leafygreen-ui/typography';
 import { NumberInputProps } from './NumberInput.types';
 
 export function NumberInput({
-  min = 0,
+  // min = 0,
   max = Math.pow(2, 8),
   onChange,
 }: NumberInputProps) {
   // const { value, handleChange } = useControlledValue(valueProp, onChange);
 
-  min = Math.round(Math.max(0, min));
+  // min = Math.round(Math.max(0, min));
   max = Math.round(max);
   const power: number = Math.log2(max);
   const id = useIdAllocator({ prefix: 'binary' });
