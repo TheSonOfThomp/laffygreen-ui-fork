@@ -2255,20 +2255,6 @@
     "@leafygreen-ui/palette" "^3.4.0"
     "@leafygreen-ui/tokens" "^1.3.1"
 
-"@leafygreen-ui/checkbox@^12.0.6":
-  version "12.0.6"
-  resolved "https://registry.yarnpkg.com/@leafygreen-ui/checkbox/-/checkbox-12.0.6.tgz#793b2e95665919cfee7b5cd525ff82e750737672"
-  integrity sha512-2VYp0+W8gMBoM/IKQhfYQ0QxyD4azdDSofypewNGfIHuOxqG+5WfN0eKoLmIGzeOZOLh0sqivHBYB9ZqDMUROw==
-  dependencies:
-    "@leafygreen-ui/a11y" "^1.4.0"
-    "@leafygreen-ui/emotion" "^4.0.3"
-    "@leafygreen-ui/hooks" "^7.5.0"
-    "@leafygreen-ui/lib" "^10.1.0"
-    "@leafygreen-ui/palette" "^3.4.7"
-    "@leafygreen-ui/tokens" "^2.0.0"
-    "@leafygreen-ui/typography" "^16.0.1"
-    react-transition-group "^4.4.1"
-
 "@leafygreen-ui/checkbox@^8.0.3":
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/checkbox/-/checkbox-8.0.3.tgz#a443a692f0b9eda60b575cdfcb67daf3c4c39be0"
