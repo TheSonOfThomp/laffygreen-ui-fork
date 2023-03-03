@@ -86,7 +86,6 @@
     "@emotion/react": "^11.4.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@leafygreen-ui/lib": "^9.3.0",
     "@leafygreen-ui/testing-lib": "^0.2.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",
