@@ -1,7 +1,7 @@
-
 # Cancel Button
 
 ![npm (scoped)](https://img.shields.io/npm/v/@leafygreen-ui/cancel-button.svg)
+
 #### [View on MongoDB.design](https://www.mongodb.design/component/cancel-button/example/)
 
 ## Installation
@@ -26,4 +26,3 @@ npm install @laffygreen-ui/cancel-button
 
 | Prop | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-
