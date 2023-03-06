@@ -1,5 +1,5 @@
 import React, { KeyboardEventHandler, useRef, useState } from 'react';
-import { Sequence, Synth, Transport } from 'tone';
+import { Synth, Transport } from 'tone';
 
 import { css } from '@leafygreen-ui/emotion';
 import Icon from '@leafygreen-ui/icon';

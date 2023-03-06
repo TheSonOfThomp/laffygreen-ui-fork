@@ -1,3 +1,2 @@
-
-export  { MorseInput } from './MorseInput';
+export { MorseInput } from './MorseInput';
 export { MorseInputProps } from './MorseInput.types';

@@ -1,7 +1,7 @@
-
 # Morse Input
 
 ![npm (scoped)](https://img.shields.io/npm/v/@leafygreen-ui/morse-input.svg)
+
 #### [View on MongoDB.design](https://www.mongodb.design/component/morse-input/example/)
 
 ## Installation
@@ -26,4 +26,3 @@ npm install @laffygreen-ui/morse-input
 
 | Prop | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-
