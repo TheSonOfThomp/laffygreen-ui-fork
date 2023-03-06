@@ -1,29 +1,40 @@
-import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, useEffect, useRef } from 'react';
 import { range } from 'lodash';
 
 import Checkbox from '@leafygreen-ui/checkbox';
-import { css } from '@leafygreen-ui/emotion';
-import { useIdAllocator } from '@leafygreen-ui/hooks';
-import { palette } from '@leafygreen-ui/palette';
-import { hoverRing, transitionDuration } from '@leafygreen-ui/tokens';
+import { css, cx } from '@leafygreen-ui/emotion';
+import { useControlledValue, useIdAllocator } from '@leafygreen-ui/hooks';
+import { useDarkMode } from '@leafygreen-ui/leafygreen-provider';
+import { createSyntheticEvent } from '@leafygreen-ui/lib';
 import { Label } from '@leafygreen-ui/typography';
 
+import { wrapperStyles, wrapperThemeStyles } from './NumberInput.styles';
 import { NumberInputProps } from './NumberInput.types';
 
+/**
+ * Input any Integer in a way computers will understand
+ */
 export function NumberInput({
-  // min = 0,
   max = Math.pow(2, 8),
-  onChange,
+  value: valProp = 0,
+  onChange: onChangeProp,
+  label,
 }: NumberInputProps) {
-  // const { value, handleChange } = useControlledValue(valueProp, onChange);
-
-  // min = Math.round(Math.max(0, min));
+  const { theme } = useDarkMode();
   max = Math.round(max);
   const power: number = Math.log2(max);
   const id = useIdAllocator({ prefix: 'binary' });
   const ref = useRef<HTMLFormElement>(null);
-  const [value, setValue] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
 
+  const { value, handleChange, setInternalValue } = useControlledValue(
+    valProp?.toFixed(),
+    onChangeProp,
+  );
+
+  /**
+   * When a checkbox is changed, fire this and change the internal value
+   */
   function updateValue(e: ChangeEvent) {
     const { index } = (e.target as HTMLElement).dataset;
     const isChecked =
@@ -31,35 +42,28 @@ export function NumberInput({
     const checkVal = Math.pow(2, Number(index));
 
     if (isChecked) {
-      setValue(value + checkVal);
+      setInternalValue((Number(value) + checkVal).toFixed());
     } else {
-      setValue(value - checkVal);
+      setInternalValue((Number(value) - checkVal).toFixed());
     }
   }
 
   useEffect(() => {
-    onChange?.(value);
-  }, [onChange, value]);
+    if (inputRef.current) {
+      const nativeEvt = new Event('change', { bubbles: true });
+      const event = createSyntheticEvent(nativeEvt, inputRef.current);
+
+      handleChange(event);
+    }
+  }, [handleChange, value]);
 
   return (
     <>
+      {label && <Label htmlFor={id}>{label}</Label>}
       <form
         ref={ref}
         id={id}
-        className={css`
-          display: flex;
-          flex-direction: row-reverse;
-          gap: 8px;
-          padding: 8px 12px 8px;
-          border: 1px solid ${palette.gray.base};
-          background-color: ${palette.gray.light3};
-          border-radius: 8px;
-          transition: box-shadow ease-in-out ${transitionDuration.default}ms;
-
-          &:hover {
-            box-shadow: ${hoverRing.light.gray};
-          }
-        `}
+        className={cx(wrapperStyles, wrapperThemeStyles[theme])}
       >
         <Label htmlFor={id}>{value}</Label>
 
@@ -72,6 +76,19 @@ export function NumberInput({
             onChange={updateValue}
           />
         ))}
+        <input
+          ref={inputRef}
+          aria-hidden
+          type="number"
+          value={Number(value)}
+          onChange={e => {
+            handleChange(e);
+          }}
+          className={css`
+            position: absolute;
+            visibility: hidden;
+          `}
+        />
       </form>
     </>
   );
