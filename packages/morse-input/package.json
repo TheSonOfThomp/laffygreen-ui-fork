@@ -25,6 +25,7 @@
       "access": "public"
     },
     "dependencies": {
+      "tone": "^14.7.77",
       "@leafygreen-ui/lib":"^10.2.1",
       "@leafygreen-ui/emotion": "^4.0.3",
       "@leafygreen-ui/typography": "^16.0.1",

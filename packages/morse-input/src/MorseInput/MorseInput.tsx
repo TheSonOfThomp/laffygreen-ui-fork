@@ -1,5 +1,9 @@
 import React, { KeyboardEventHandler, useRef, useState } from 'react';
+import { Sequence, Synth, Transport } from 'tone';
 
+import { css } from '@leafygreen-ui/emotion';
+import Icon from '@leafygreen-ui/icon';
+import IconButton from '@leafygreen-ui/icon-button';
 import { keyMap } from '@leafygreen-ui/lib';
 import TextInput from '@leafygreen-ui/text-input';
 
@@ -11,6 +15,18 @@ interface KeyLog {
   time: number;
 }
 
+const Beeper = new Synth({
+  envelope: {
+    attack: 0.0,
+    decay: 0,
+    sustain: 1,
+    release: 0.1,
+  },
+  oscillator: {
+    type: 'square1',
+  },
+}).toDestination();
+
 /**
  * Enter text in Morse Code.
  *
@@ -18,7 +34,7 @@ interface KeyLog {
  */
 export function MorseInput({
   label,
-  timeUnit = 72,
+  timeUnit = 70,
   ...props
 }: MorseInputProps) {
   const dashTime = 3 * timeUnit;
@@ -31,6 +47,7 @@ export function MorseInput({
   const [charTimerId, setCharTimer] = useState<NodeJS.Timeout>();
   const [spaceTimerId, setSpaceTimer] = useState<NodeJS.Timeout>();
   const [characters, setCharacters] = useState<Array<string>>([]);
+
   const getValue = () =>
     characters
       .map(char => {
@@ -70,6 +87,10 @@ export function MorseInput({
           time: Date.now(),
         });
       }
+      Transport.stop();
+      Transport.cancel(0);
+      Transport.start();
+      Beeper.triggerAttack('C5');
     } else if (e.keyCode === keyMap.Backspace || e.keyCode === keyMap.Delete) {
       const _tmp = [...characters];
       _tmp.pop();
@@ -117,18 +138,77 @@ export function MorseInput({
         type: 'up',
         time: Date.now(),
       });
+
+      Beeper.triggerRelease();
     }
   };
 
+  function playValue() {
+    Transport.stop();
+    Transport.cancel(0);
+    Beeper.toDestination().sync();
+    let ellapsedTimeMs = 0; //Transport.now() * 1000 + timeUnit;
+    const value = characters.join('');
+
+    value.split('').forEach(char => {
+      switch (char) {
+        case '.': {
+          Beeper.triggerAttackRelease(
+            'C5',
+            timeUnit / 1000,
+            ellapsedTimeMs / 1000,
+          );
+          ellapsedTimeMs += timeUnit * 2;
+          break;
+        }
+
+        case '-': {
+          Beeper.triggerAttackRelease(
+            'C5',
+            dashTime / 1000,
+            ellapsedTimeMs / 1000,
+          );
+          ellapsedTimeMs += dashTime * 2;
+
+          break;
+        }
+
+        case ' ':
+        default: {
+          ellapsedTimeMs += spaceDelay;
+          break;
+        }
+      }
+    });
+    Transport.start();
+  }
+
   return (
-    <TextInput
-      {...props}
-      type="text"
-      onKeyDown={handleKeyDown}
-      onKeyUp={handleKeyUp}
-      value={getValue()}
-      label={label ? textToMorse(label) : null}
-    />
+    <div
+      className={css`
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+      `}
+    >
+      <TextInput
+        {...props}
+        type="text"
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
+        value={getValue()}
+        label={label ? textToMorse(label) : ''}
+      />
+      <IconButton
+        aria-label="play"
+        className={css`
+          margin-bottom: 4px;
+        `}
+        onClick={playValue}
+      >
+        <Icon glyph="Play" />
+      </IconButton>
+    </div>
   );
 }
 
