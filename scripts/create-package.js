@@ -103,9 +103,7 @@ const packageJSON = `
     "publishConfig": {
       "access": "public"
     },
-    "dependencies": {
-      "@leafygreen-ui/lib": "^10.0.0"
-    }
+    "dependencies": {}
   }
 `;
 
@@ -117,12 +115,7 @@ const tsConfig = `
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src/**/*"],
-  "references": [
-    {
-      "path": "../lib"
-    }
-  ]
+  "include": ["src/**/*"]
 }
 `;
 
