@@ -61,9 +61,9 @@ ensure_github_username() {
 }
 
 attempt_publish() {
-    local repo="https://github.com/$1/leafygreen-ui.git"
+    local repo="https://github.com/$1/laffygreen-ui.git"
 
-    local repo_with_emphasis="\033[1mhttps://github.com/\033[4m$1\033[24m/leafygreen-ui.git\033[0m"
+    local repo_with_emphasis="\033[1mhttps://github.com/\033[4m$1\033[24m/laffygreen-ui.git\033[0m"
 
     echo "About to publish Storybook to $repo_with_emphasis\n"
     read -r -p "Are you sure this is correct? [y/N] " response
