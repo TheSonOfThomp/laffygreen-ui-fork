@@ -73,6 +73,8 @@ export function MorseInput({
   const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = e => {
     // if it's not the space bar, ignore it
     if (e.keyCode === keyMap.Space) {
+      Beeper.triggerAttack('C5');
+
       // when the key goes down
       // clear the timer(s)
       if (charTimerId) clearTimeout(charTimerId);
@@ -87,10 +89,6 @@ export function MorseInput({
           time: Date.now(),
         });
       }
-      Transport.stop();
-      Transport.cancel(0);
-      Transport.start();
-      Beeper.triggerAttack('C5');
     } else if (e.keyCode === keyMap.Backspace || e.keyCode === keyMap.Delete) {
       const _tmp = [...characters];
       _tmp.pop();
@@ -140,6 +138,9 @@ export function MorseInput({
       });
 
       Beeper.triggerRelease();
+      Transport.stop();
+      Transport.cancel(0);
+      Transport.start();
     }
   };
 

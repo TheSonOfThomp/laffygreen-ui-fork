@@ -3,6 +3,7 @@ import { ComponentStory } from '@storybook/react';
 
 import LeafyGreenProvider from '@leafygreen-ui/leafygreen-provider';
 import { StoryMeta } from '@leafygreen-ui/lib';
+import { Body } from '@leafygreen-ui/typography';
 
 import { CancelButton } from '.';
 
@@ -15,7 +16,9 @@ export default StoryMeta({
       exclude: ['container'],
     },
   },
-  args: {},
+  args: {
+    darkMode: false,
+  },
 });
 
 const Template: ComponentStory<typeof CancelButton> = ({
@@ -24,7 +27,11 @@ const Template: ComponentStory<typeof CancelButton> = ({
   ...props
 }) => (
   <LeafyGreenProvider darkMode={darkMode}>
+    <Body darkMode={darkMode}>
+      Click the button to cancel your subscription
+    </Body>
     <CancelButton
+      darkMode={darkMode}
       {...props}
       container={
         document.querySelector('#story--components-cancelbutton--basic') ||
