@@ -11,8 +11,14 @@ export default StoryMeta({
   parameters: {
     default: 'Basic',
   },
+  argTypes: {
+    timeUnit: {
+      control: 'number',
+      defaultValue: 70,
+    },
+  },
   args: {
-    label: 'This is a label',
+    label: 'Hello',
   },
 });
 
