@@ -1,7 +1,7 @@
 {
-  "name": "@laffygreen-ui/cancel-button",
+  "name": "@laffygreen-ui/date-picker",
   "version": "0.9.0",
-  "description": "Laffygreen UI Kit Cancel Button",
+  "description": "Laffygreen UI Kit Date Picker",
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,7 @@
     "build": "../../node_modules/.bin/rollup --config ../../rollup.config.js"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/thesonofthomp/leafygreen-ui/tree/laffygreen-ui/packages/cancel-button",
+  "homepage": "https://github.com/thesonofthomp/leafygreen-ui/tree/laffygreen-ui/packages/date-picker",
   "repository": {
     "type": "git",
     "url": "https://github.com/thesonofthomp/leafygreen-ui/tree/laffygreen-ui"
@@ -27,16 +27,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@leafygreen-ui/leafygreen-provider": "^3.1.1"
-  },
   "dependencies": {
-    "@leafygreen-ui/button": "^20.0.1",
+    "@leafygreen-ui/card": "^9.0.5",
     "@leafygreen-ui/emotion": "^4.0.3",
-    "@leafygreen-ui/tokens": "^2.0.0"
-  },
-  "devDependencies": {
-    "@leafygreen-ui/typography": "^16.0.1",
-    "@leafygreen-ui/lib": "^10.2.1"
+    "@leafygreen-ui/hooks": "^7.6.0",
+    "@leafygreen-ui/leafygreen-provider": "^3.1.1",
+    "@leafygreen-ui/lib": "^10.2.1",
+    "@leafygreen-ui/palette": "^3.4.7",
+    "@leafygreen-ui/typography": "^16.0.1"
   }
 }

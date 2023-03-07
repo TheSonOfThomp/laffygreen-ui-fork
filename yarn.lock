@@ -2240,6 +2240,19 @@
     "@leafygreen-ui/tokens" "^2.0.0"
     polished "^4.2.2"
 
+"@leafygreen-ui/button@^20.0.1":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/button/-/button-20.0.1.tgz#ad796f2003b187995cd7e93a568ce40b276677a9"
+  integrity sha512-UIJ9IuPzWU+EZTzUQqWeX7ldt6wY8SjrV3IYTTnIN7lChuKzGW7VudMErnbEVM+ms79lQo7j3o/aa+FoKEoV/g==
+  dependencies:
+    "@leafygreen-ui/box" "^3.1.1"
+    "@leafygreen-ui/emotion" "^4.0.3"
+    "@leafygreen-ui/lib" "^10.2.1"
+    "@leafygreen-ui/palette" "^3.4.7"
+    "@leafygreen-ui/ripple" "^1.1.8"
+    "@leafygreen-ui/tokens" "^2.0.0"
+    polished "^4.2.2"
+
 "@leafygreen-ui/callout@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/callout/-/callout-5.0.1.tgz#17104b07c5bd53873531f780bcfdc5280f9419f5"
@@ -2261,6 +2274,18 @@
     "@leafygreen-ui/lib" "^9.3.0"
     "@leafygreen-ui/palette" "^3.4.0"
     "@leafygreen-ui/tokens" "^1.3.1"
+
+"@leafygreen-ui/card@^9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/card/-/card-9.0.5.tgz#ee30ef15af9a2362d51dfbcd0c7c29ea1be8e30d"
+  integrity sha512-zeKH3MRncg/RzNrJy/kE2/9n3tFyZ2KsU+6vP8LhRiftJ9IYxGLvpldq3zNBAMRBOpVHxI8VHE+rbZ2NzFKxUw==
+  dependencies:
+    "@leafygreen-ui/box" "^3.1.1"
+    "@leafygreen-ui/emotion" "^4.0.3"
+    "@leafygreen-ui/lib" "^10.1.0"
+    "@leafygreen-ui/palette" "^3.4.7"
+    "@leafygreen-ui/tokens" "^2.0.0"
+    polished "^4.2.2"
 
 "@leafygreen-ui/checkbox@^12.0.6":
   version "12.0.6"
@@ -2507,6 +2532,14 @@
   dependencies:
     "@leafygreen-ui/hooks" "^7.3.3"
     "@leafygreen-ui/lib" "^9.5.1"
+
+"@leafygreen-ui/leafygreen-provider@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/leafygreen-provider/-/leafygreen-provider-3.1.1.tgz#97f9a2105eccdf03221c5859c4aa819cbb5334a9"
+  integrity sha512-S2FbJ1u/6BgEK05AStYAhSPOb9MXGZArPc7/j/7SyBlm3OJI26g+lueY5YvI04qDEGX6hgs+CoA+0MYK19loIA==
+  dependencies:
+    "@leafygreen-ui/hooks" "^7.5.0"
+    "@leafygreen-ui/lib" "^10.1.0"
 
 "@leafygreen-ui/lib@10.2.1", "@leafygreen-ui/lib@^10.0.0", "@leafygreen-ui/lib@^10.1.0", "@leafygreen-ui/lib@^10.2.0", "@leafygreen-ui/lib@^10.2.1":
   version "10.2.1"
@@ -7567,9 +7600,9 @@ camelize@^1.0.0:
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
 caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001135, caniuse-lite@^1.0.30001317, caniuse-lite@^1.0.30001332:
-  version "1.0.30001435"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001435.tgz#502c93dbd2f493bee73a408fe98e98fb1dad10b2"
-  integrity sha512-kdCkUTjR+v4YAJelyiDTqiu82BDr4W4CP5sgTA0ZBmqn30XfS2ZghPLMowik9TPhS+psWJiUNxsqLyurDbmutA==
+  version "1.0.30001462"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001462.tgz#b2e801e37536d453731286857c8520d3dcee15fe"
+  integrity sha512-PDd20WuOBPiasZ7KbFnmQRyuLE7cFXW2PVd7dmALzbkUXEP46upAuCDm9eY9vho8fgNMGmbAX92QBZHzcnWIqw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
