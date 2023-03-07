@@ -24,7 +24,6 @@ export function DatePicker({
   ...rest
 }: DatePickerProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const currentDateCardRef = useRef<HTMLDivElement>(null);
   const { value, handleChange, setInternalValue } = useControlledValue(
     valueProp,
     onChange,
@@ -89,7 +88,6 @@ export function DatePicker({
         <SkeletonCard />
 
         <Card
-          ref={currentDateCardRef}
           className={cx(
             baseCardStyles,
             css`
