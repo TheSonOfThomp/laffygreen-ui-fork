@@ -6,7 +6,7 @@ const grow = keyframes`
   } 
 `;
 
-const shake = keyframes`
+const wobble = keyframes`
   0% {
     translate: 0% -3%;
   } 
@@ -19,7 +19,7 @@ export const toastStyles = css`
   scale: 0.3;
   transform-origin: top;
   translate: 0% 0%;
-  animation-name: ${grow}, ${shake};
+  animation-name: ${grow}, ${wobble};
   animation-duration: 30000ms, 2s;
   animation-timing-function: cubic-bezier(0, 0, 1, 0), ease-in-out;
   animation-delay: 1s, 1s;
