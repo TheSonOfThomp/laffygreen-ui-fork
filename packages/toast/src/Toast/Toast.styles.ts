@@ -17,7 +17,8 @@ const wobble = keyframes`
 `;
 
 export const toastStyles = css`
-  position: relative;
+  position: absolute;
+  inset: 0;
   scale: 0.3;
   transform-origin: top;
   translate: 0% 0%;
