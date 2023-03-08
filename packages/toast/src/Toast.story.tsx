@@ -16,11 +16,11 @@ export default StoryMeta({
   },
 });
 
-const Template = props => {
+const Template = (darkMode: boolean) => {
   return (
     // eslint-disable-next-line react/prop-types
-    <LeafyGreenProvider darkMode={props.darkMode}>
-      <Toast {...props} />
+    <LeafyGreenProvider darkMode={darkMode}>
+      <Toast />
     </LeafyGreenProvider>
   );
 };

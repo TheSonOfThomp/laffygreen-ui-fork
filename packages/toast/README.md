@@ -1,7 +1,7 @@
-
 # Toast
 
 ![npm (scoped)](https://img.shields.io/npm/v/@leafygreen-ui/toast.svg)
+
 #### [View on MongoDB.design](https://www.mongodb.design/component/toast/example/)
 
 ## Installation
@@ -26,4 +26,3 @@ npm install @laffygreen-ui/toast
 
 | Prop | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-
