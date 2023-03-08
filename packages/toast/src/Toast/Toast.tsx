@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { toastStyles } from './Toast.styles';
+import { bodyStyles, toastStyles } from './Toast.styles';
+import { ToastProps } from './Toast.types';
 
-export function Toast() {
+export function Toast({ body }: ToastProps) {
   return (
-    <div>
-      <img
-        className={toastStyles}
-        src="https://assets.codepen.io/125292/toast.png"
-        alt="toast"
-      />
+    <div className={toastStyles}>
+      <img src="https://assets.codepen.io/125292/toast.png" alt="toast" />
+      <span className={bodyStyles}>{body}</span>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import LeafyGreenProvider from '@leafygreen-ui/leafygreen-provider';
 import { StoryMeta } from '@leafygreen-ui/lib';
 
+import { ToastProps } from './Toast/Toast.types';
 import { Toast } from '.';
 
 export default StoryMeta({
@@ -13,14 +14,17 @@ export default StoryMeta({
   },
   args: {
     darkMode: true,
+    body: 'Body',
   },
 });
 
-const Template = (darkMode: boolean) => {
+type Props = ToastProps & { darkMode: boolean };
+
+const Template = ({ darkMode, ...rest }: Props) => {
   return (
     // eslint-disable-next-line react/prop-types
     <LeafyGreenProvider darkMode={darkMode}>
-      <Toast />
+      <Toast {...rest} />
     </LeafyGreenProvider>
   );
 };

@@ -1,1 +1,3 @@
-export interface ToastProps {}
+export interface ToastProps {
+  body: string;
+}
