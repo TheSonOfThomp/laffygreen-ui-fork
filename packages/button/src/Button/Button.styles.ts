@@ -50,7 +50,7 @@ const baseButtonStyles = css`
 const colorSet: Record<Theme, Record<Variant, string>> = {
   [Theme.Light]: {
     [Variant.Default]: css`
-      background-color: ${palette.gray.light3};
+      background-color: ${palette.purple.base};
       border-color: ${palette.gray.base};
       color: ${palette.black};
 
