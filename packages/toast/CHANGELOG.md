@@ -1,5 +1,13 @@
 # @leafygreen-ui/toast
 
+## 6.1.5
+
+### Patch Changes
+
+- 9ad8abf5: Memoizes functions and stack inside of useReducer
+- Updated dependencies [6a3f03fd]
+  - @leafygreen-ui/typography@16.4.1
+
 ## 6.1.4
 
 ### Patch Changes
